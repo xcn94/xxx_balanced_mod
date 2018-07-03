@@ -1,0 +1,455 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GameData>
+  <!-- Almost all gameplay types should first be added to the types table. -->
+  <!-- This serves as a central way to reference any type -->
+	<!-- japan -->
+	<Units>
+		<Update>
+			<Where UnitType="UNIT_JAPANESE_SAMURAI"/>
+			<Set Combat="43"/>
+		</Update>
+	</Units>
+	<TraitModifiers>
+		<Delete TraitType="TRAIT_LEADER_DIVINE_WIND" ModifierId="TRAIT_BOOST_ENCAMPMENT_PRODUCTION"/>
+		<Delete TraitType="TRAIT_LEADER_DIVINE_WIND" ModifierId="TRAIT_BOOST_THEATER_DISTRICT_PRODUCTION"/>
+		<Delete TraitType="TRAIT_LEADER_DIVINE_WIND" ModifierId="TRAIT_BOOST_HOLY_SITE_PRODUCTION"/>
+		<Row TraitType="TRAIT_LEADER_DIVINE_WIND" ModifierId="TRAIT_BOOST_50per_HOLY_SITE_PRODUCTION"/>
+		<Row TraitType="TRAIT_LEADER_DIVINE_WIND" ModifierId="TRAIT_BOOST_50per_ENCAMPMENT_PRODUCTION"/>
+		<Row TraitType="TRAIT_LEADER_DIVINE_WIND" ModifierId="TRAIT_BOOST_50per_THEATER_DISTRICT_PRODUCTION"/>
+	</TraitModifiers>
+	<Modifiers>
+		<Delete ModifierId = 'TRAIT_BOOST_HOLY_SITE_PRODUCTION'/>
+		<Row>
+			<ModifierId>TRAIT_BOOST_50per_HOLY_SITE_PRODUCTION</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_DISTRICT_PRODUCTION</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_BOOST_50per_ENCAMPMENT_PRODUCTION</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_DISTRICT_PRODUCTION</ModifierType>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_BOOST_50per_THEATER_DISTRICT_PRODUCTION</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_DISTRICT_PRODUCTION</ModifierType>
+		</Row>
+	</Modifiers>
+	<ModifierArguments>
+		<Row>
+			<ModifierId>TRAIT_BOOST_50per_HOLY_SITE_PRODUCTION</ModifierId>
+			<Name>DistrictType</Name>
+			<Value>DISTRICT_HOLY_SITE</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_BOOST_50per_HOLY_SITE_PRODUCTION</ModifierId>
+			<Name>Amount</Name>
+			<Value>50</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_BOOST_50per_THEATER_DISTRICT_PRODUCTION</ModifierId>
+			<Name>DistrictType</Name>
+			<Value>DISTRICT_THEATER</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_BOOST_50per_THEATER_DISTRICT_PRODUCTION</ModifierId>
+			<Name>Amount</Name>
+			<Value>50</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_BOOST_50per_ENCAMPMENT_PRODUCTION</ModifierId>
+			<Name>DistrictType</Name>
+			<Value>DISTRICT_ENCAMPMENT</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_BOOST_50per_ENCAMPMENT_PRODUCTION</ModifierId>
+			<Name>Amount</Name>
+			<Value>50</Value>
+		</Row>
+	</ModifierArguments>
+	<!-- russia -->
+	<Units>
+		<Update>
+			<Where UnitType="UNIT_RUSSIAN_COSSACK"/>
+			<Set Combat="65"/>
+		</Update>
+	</Units>
+	<ModifierArguments>
+		<Update>
+			<Where ModifierId="TRAIT_INCREASED_TILES" Name="Amount"/>
+			<Set Value="4"/>
+		</Update>
+	</ModifierArguments>
+	<!-- greece -->
+	<Units>
+		<Update>
+			<Where UnitType="UNIT_GREEK_HOPLITE"/>
+			<Set Combat="27"/>
+		</Update>
+	</Units>
+	<TraitModifiers>
+		<Update>
+			<Where TraitType="TRAIT_CIVILIZATION_PLATOS_REPUBLIC"/>
+			<Set ModifierId="TRAIT_GREECE_ECONOMIC_GOVERNMENT_SLOT"/>
+		</Update>
+	</TraitModifiers>
+	<Modifiers>
+		<Row>
+			<ModifierId>TRAIT_GREECE_ECONOMIC_GOVERNMENT_SLOT</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_CULTURE_ADJUST_GOVERNMENT_SLOTS_MODIFIER</ModifierType>
+		</Row>
+	</Modifiers>
+	<ModifierArguments>
+		<Update>
+			<Where ModifierId="HOPLITE_NEIGHBOR_COMBAT_MODIFIER" Name="Amount"/>
+			<Set Value="5"/>
+		</Update>
+		<Update>
+			<Where ModifierId="UNIQUE_LEADER_CULTURE_KILLS" Name="PercentDefeatedStrength"/>
+			<Set Value="20"/>
+		</Update>
+		<Row>
+			<ModifierId>TRAIT_GREECE_ECONOMIC_GOVERNMENT_SLOT</ModifierId>
+			<Name>GovernmentSlotType</Name>
+			<Value>SLOT_ECONOMIC</Value>
+		</Row>
+	</ModifierArguments>.
+	<!-- egypt -->
+	<Units>
+		<Update>
+			<Where UnitType="UNIT_EGYPTIAN_CHARIOT_ARCHER"/>
+			<Set Cost="100"/>
+		</Update>
+	</Units>
+	<ModifierArguments>
+		<Update>
+			<Where ModifierId="TRAIT_RIVER_FASTER_BUILDTIME_DISTRICT" Name="Amount"/>
+			<Set Value="25"/>
+		</Update>
+		<Update>
+			<Where ModifierId="TRAIT_RIVER_FASTER_BUILDTIME_WONDER" Name="Amount"/>
+			<Set Value="25"/>
+		</Update>
+		<Update>
+			<Where ModifierId="TRAIT_INTERNATIONAL_TRADE_GAIN_GOLD" Name="Amount"/>
+			<Set Value="6"/>
+		</Update>
+		<Update>
+			<Where ModifierId="TRAIT_INCOMING_TRADE_GAIN_GOLD" Name="Amount"/>
+			<Set Value="3"/>
+		</Update>
+		
+	</ModifierArguments>
+	<!-- sumer -->
+	<Units>
+		<Update>
+			<Where UnitType="UNIT_SUMERIAN_WAR_CART"/>
+			<Set MandatoryObsoleteTech="TECH_COMBUSTION" PrereqTech="TECH_THE_WHEEL"/>
+		</Update>
+	</Units>
+	<UnitReplaces>
+		<Row CivUniqueUnitType="UNIT_SUMERIAN_WAR_CART" ReplacesUnitType="UNIT_HEAVY_CHARIOT"/>
+	</UnitReplaces>
+	<Improvement_YieldChanges>
+		<Row ImprovementType="IMPROVEMENT_ZIGGURAT" YieldType="YIELD_FOOD" YieldChange="1"/>
+	</Improvement_YieldChanges>	
+	<!-- china -->
+	<Units>
+		<Update>
+			<Where UnitType="UNIT_CHINESE_CROUCHING_TIGER"/>
+			<Set Cost="200" RangedCombat="45" Range="2"/>
+		</Update>
+	</Units>
+	<UnitReplaces>
+		<Row CivUniqueUnitType="UNIT_CHINESE_CROUCHING_TIGER" ReplacesUnitType="UNIT_CROSSBOWMAN"/>
+	</UnitReplaces>
+	<!-- france -->
+	<Units>
+		<Update>
+			<Where UnitType="UNIT_FRENCH_GARDE_IMPERIALE"/>
+			<Set Cost="250" Maintenance="4" Combat="50" PrereqTech="TECH_GUNPOWDER"/>
+		</Update>
+	</Units>
+	<UnitReplaces>
+		<Row CivUniqueUnitType="UNIT_FRENCH_GARDE_IMPERIALE" ReplacesUnitType="UNIT_MUSKETMAN"/>
+	</UnitReplaces>
+	<Improvements>
+		<Update>
+			<Where Name="LOC_IMPROVEMENT_CHATEAU_NAME"/>
+			<Set RequiresRiver="false"/>
+		</Update>
+	</Improvements>
+	<!-- kongo -->
+	<Units>
+		<Update>
+			<Where UnitType="UNIT_KONGO_SHIELD_BEARER"/>
+			<Set Cost="100"/>
+		</Update>
+	</Units>
+	<ModifierArguments>
+		<Update>
+			<Where ModifierId="NAGAO_RANGED_DEFENSE" Name="Amount"/>
+			<Set Value="5"/>
+		</Update>
+	</ModifierArguments>		
+	<!-- spain -->
+	<Units>
+		<Update>
+			<Where UnitType="UNIT_SPANISH_CONQUISTADOR"/>
+			<Set Cost="280" Combat="60"/>
+		</Update>
+	</Units>
+	<ModifierArguments>
+		<Update>
+			<Where ModifierId="CONQUISTADOR_SPECIFIC_UNIT_COMBAT" Name="Amount"/>
+			<Set Value="5"/>
+		</Update>
+		<Update>
+			<Where ModifierId="TRAIT_INTERCONTINENTAL_DOMESTIC_PRODUCTION" Name="Amount"/>
+			<Set Value="2"/>
+		</Update>
+		<Update>
+			<Where ModifierId="TRAIT_INTERCONTINENTAL_DOMESTIC_FOOD" Name="Amount"/>
+			<Set Value="2"/>
+		</Update>
+	</ModifierArguments>
+	<!-- norway -->
+	<Units>
+		<Update>
+			<Where UnitType="UNIT_NORWEGIAN_BERSERKER"/>
+			<Set Combat="43"/>
+		</Update>
+	</Units>
+	<ModifierArguments>
+		<Update>
+			<Where ModifierId="UNIT_STRONG_WHEN_ATTACKING" Name="Amount"/>
+			<Set Value="7"/>
+		</Update>
+		<Update>
+			<Where ModifierId="STAVECHURCH_SEARESOURCE_PRODUCTION" Name="Amount"/>
+			<Set Value="2"/>
+		</Update>
+	</ModifierArguments>
+	<!-- german -->
+	<TraitModifiers>
+		<Delete TraitType="TRAIT_LEADER_HOLY_ROMAN_EMPEROR" ModifierId="TRAIT_MILITARY_GOVERNMENT_SLOT"/>
+	</TraitModifiers>
+	<Adjacency_YieldChanges>
+		<Update>
+			<Where ID="Resource_Production"/>
+			<Set TilesRequired="2"/>
+		</Update>
+	</Adjacency_YieldChanges>
+	<!-- scythia -->
+	<Units>
+		<Update>
+			<Where UnitType="UNIT_SCYTHIAN_HORSE_ARCHER"/>
+			<Set Cost="80" Combat="25" Maintenance="1" RangedCombat="33" PrereqTech="TECH_HORSEBACK_RIDING"/>
+		</Update>
+	</Units>
+	<CivilizationTraits>
+		<Delete CivilizationType="CIVILIZATION_SCYTHIA" TraitType="TRAIT_CIVILIZATION_EXTRA_LIGHT_CAVALRY"/>
+	</CivilizationTraits>
+	<Improvement_YieldChanges>
+		<Update>
+			<Where ImprovementType="IMPROVEMENT_KURGAN" YieldType="YIELD_GOLD"/>
+			<Set YieldChange="3"/>
+		</Update>
+	</Improvement_YieldChanges>
+	<ModifierArguments>
+		<Update>
+			<Where ModifierId="BONUS_VS_WOUNDED_UNITS" Name="Amount"/>
+			<Set Value="3"/>
+		</Update>
+	</ModifierArguments>
+	<!-- america -->
+	<Units>
+		<Update>
+			<Where UnitType="UNIT_AMERICAN_ROUGH_RIDER"/>
+			<Set Cost="340" Combat="65" PromotionClass="PROMOTION_CLASS_LIGHT_CAVALRY" PrereqTech="TECH_MILITARY_SCIENCE"/>
+		</Update>
+	</Units>
+	<UnitUpgrades>
+		<Delete Unit="UNIT_AMERICAN_ROUGH_RIDER" UpgradeUnit="UNIT_MODERN_ARMOR"/>
+		<Row Unit="UNIT_AMERICAN_ROUGH_RIDER" UpgradeUnit="UNIT_HELICOPTER"/>
+	</UnitUpgrades>
+	<UnitReplaces>
+		<Row CivUniqueUnitType="UNIT_AMERICAN_ROUGH_RIDER" ReplacesUnitType="UNIT_CAVALRY"/>
+	</UnitReplaces>
+	<TypeTags>
+		<Delete Type="UNIT_AMERICAN_ROUGH_RIDER" Tag="CLASS_HEAVY_CAVALRY"/>
+		<Row Type="UNIT_AMERICAN_ROUGH_RIDER" Tag="CLASS_LIGHT_CAVALRY"/>
+	</TypeTags>
+	<ModifierArguments>
+		<Update>
+			<Where ModifierId="COMBAT_BONUS_HOME_CONTINENT_MODIFIER" Name="Amount"/>
+			<Set Value="3"/>
+		</Update>
+		<Update>
+			<Where ModifierId="ROUGH_RIDER_BONUS_ON_HILLS" Name="Amount"/>
+			<Set Value="5"/>
+		</Update>
+		<Update>
+			<Where ModifierId="TRAIT_ALL_DIPLO_POLICY_ARE_WILDCARDS" Name="AddedGovernmentSlotType"/>
+			<Set Value="SLOT_ECONOMIC"/>
+		</Update>
+	</ModifierArguments>
+	<!--
+	<CivilizationTraits>
+		<Delete CivilizationType="CIVILIZATION_AMERICA" TraitType="TRAIT_CIVILIZATION_FOUNDING_FATHERS"/>
+	</CivilizationTraits>
+	-->
+	<!-- england -->
+	<Units>
+		<Update>
+			<Where UnitType="UNIT_ENGLISH_SEADOG"/>
+			<Set PrereqCivic="CIVIC_EXPLORATION"/>
+		</Update>
+		<Update>
+			<Where UnitType="UNIT_ENGLISH_REDCOAT"/>
+			<Set Cost="250" Maintenance="4" Combat="55" PrereqTech="TECH_GUNPOWDER"/>
+		</Update>
+	</Units>
+	<UnitReplaces>
+		<Row CivUniqueUnitType="UNIT_ENGLISH_REDCOAT" ReplacesUnitType="UNIT_MUSKETMAN"/>
+	</UnitReplaces>
+	<ModifierArguments>
+		<Update>
+			<Where ModifierId="ROYAL_NAVY_DOCKYARD_GOLD_FROM_FOREIGN_CONTINENT" Name="Amount"/>
+			<Set Value="3"/>
+		</Update>
+		<Update>
+			<Where ModifierId="REDCOAT_FOREIGN_COMBAT" Name="Amount"/>
+			<Set Value="5"/>
+		</Update>
+	</ModifierArguments>
+	<Adjacency_YieldChanges>
+		<Update>
+			<Where ID="RoyalDock_City_Gold"/>
+			<Set YieldChange="3"/>
+		</Update>
+	</Adjacency_YieldChanges>
+	<!-- india -->
+	<Units>
+		<Update>
+			<Where UnitType="UNIT_INDIAN_VARU"/>
+			<Set Combat="42"/>
+		</Update>
+	</Units>
+	<ModifierArguments>
+		<Update>
+			<Where ModifierId="TRAIT_FAITH_PEACEFUL_FOUNDERS" Name="Amount"/>
+			<Set Value="10"/>
+		</Update>
+		<Update>
+			<Where ModifierId="VARU_NEGATIVE_COMBAT_MODIFIER" Name="Amount"/>
+			<Set Value="-3"/>
+		</Update>
+	</ModifierArguments>
+	<Improvement_YieldChanges>
+		<Update>
+			<Where ImprovementType="IMPROVEMENT_STEPWELL" YieldType="YIELD_FAITH"/>
+			<Set YieldChange="1"/>
+		</Update>
+	</Improvement_YieldChanges>
+	<!-- aztec -->
+	<Units>
+		<Update>
+			<Where UnitType="UNIT_AZTEC_EAGLE_WARRIOR"/>
+			<Set Cost="100" Maintenance="2" Combat="38" PrereqTech="TECH_IRON_WORKING" MandatoryObsoleteTech="TECH_REPLACEABLE_PARTS"/>
+		</Update>
+	</Units>
+	<UnitReplaces>
+		<Delete CivUniqueUnitType="UNIT_AZTEC_EAGLE_WARRIOR" ReplacesUnitType="UNIT_WARRIOR"/>
+		<Row CivUniqueUnitType="UNIT_AZTEC_EAGLE_WARRIOR" ReplacesUnitType="UNIT_SWORDSMAN"/>
+	</UnitReplaces>
+	<UnitUpgrades>
+		<Delete Unit="UNIT_AZTEC_EAGLE_WARRIOR" UpgradeUnit="UNIT_SWORDSMAN"/>
+		<Row Unit="UNIT_AZTEC_EAGLE_WARRIOR" UpgradeUnit="UNIT_MUSKETMAN"/>
+	</UnitUpgrades>
+	<!-- arabia -->
+	<Units>
+		<Update>
+			<Where UnitType="UNIT_ARABIAN_MAMLUK"/>
+			<Set Cost="200" Maintenance="4" Combat="51"/>
+		</Update>
+	</Units>
+	<Modifiers>
+		<Row>
+			<ModifierId>TRAIT_BONUS_GREAT_PROPHET_POINT_CPLMOD</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_ADJUST_GREAT_PERSON_POINTS</ModifierType>
+		</Row>
+	</Modifiers>
+	<ModifierArguments>
+		<Update>
+			<Where ModifierId="TRAIT_RELIGIOUS_BUILDING_MULTIPLIER_CULTURE" Name="Multiplier"/>
+			<Set Value="20"/>
+		</Update>
+		<Update>
+			<Where ModifierId="TRAIT_RELIGIOUS_BUILDING_MULTIPLIER_FAITH" Name="Multiplier"/>
+			<Set Value="20"/>
+		</Update>
+		<Update>
+			<Where ModifierId="TRAIT_RELIGIOUS_BUILDING_MULTIPLIER_SCIENCE" Name="Multiplier"/>
+			<Set Value="20"/>
+		</Update>
+		<Row>
+			<ModifierId>TRAIT_BONUS_GREAT_PROPHET_POINT_CPLMOD</ModifierId>
+			<Name>GreatPersonClassType</Name>
+			<Value>GREAT_PERSON_CLASS_PROPHET</Value>
+		</Row>
+		<Row>
+			<ModifierId>TRAIT_BONUS_GREAT_PROPHET_POINT_CPLMOD</ModifierId>
+			<Name>Amount</Name>
+			<Value>1</Value>
+		</Row>
+	</ModifierArguments>
+	<TraitModifiers>
+		<Row>
+			<TraitType>TRAIT_CIVILIZATION_LAST_PROPHET</TraitType>
+			<ModifierId>TRAIT_BONUS_GREAT_PROPHET_POINT_CPLMOD</ModifierId>
+		</Row>
+	</TraitModifiers>
+
+	
+	<StartBiasFeatures>
+		<Update>
+			<Where CivilizationType="CIVILIZATION_BRAZIL" FeatureType="FEATURE_JUNGLE"/>
+			<Set Tier="1"/>
+		</Update>
+		<Update>
+			<Where CivilizationType="CIVILIZATION_EGYPT" FeatureType="FEATURE_FLOODPLAINS"/>
+			<Set Tier="3"/>
+		</Update>
+	</StartBiasFeatures>
+	<StartBiasTerrains>
+		<Update>
+			<Where CivilizationType="CIVILIZATION_ENGLAND" TerrainType="TERRAIN_COAST"/>
+			<Set Tier="1"/>
+		</Update>
+		<Row CivilizationType="CIVILIZATION_ENGLAND" TerrainType="TERRAIN_PLAINS_HILLS" Tier="4"/>
+		<Update>
+			<Where CivilizationType="CIVILIZATION_NORWAY" TerrainType="TERRAIN_COAST"/>
+			<Set Tier="1"/>
+		</Update>
+		<Row CivilizationType="CIVILIZATION_NORWAY" TerrainType="TERRAIN_PLAINS_HILLS" Tier="4"/>
+		<Update>
+			<Where CivilizationType="CIVILIZATION_RUSSIA" TerrainType="TERRAIN_TUNDRA"/>
+			<Set Tier="1"/>
+		</Update>
+		<Update>
+			<Where CivilizationType="CIVILIZATION_RUSSIA" TerrainType="TERRAIN_TUNDRA_HILLS"/>
+			<Set Tier="1"/>
+		</Update>
+		<Update>
+			<Where CivilizationType="CIVILIZATION_SPAIN" TerrainType="TERRAIN_COAST"/>
+			<Set Tier="5"/>
+		</Update>
+		<Row CivilizationType="CIVILIZATION_SPAIN" TerrainType="TERRAIN_PLAINS_HILLS" Tier="4"/>
+		<Row CivilizationType="CIVILIZATION_INDONESIA" TerrainType="TERRAIN_PLAINS_HILLS" Tier="4"/>
+		<Row CivilizationType="CIVILIZATION_KHMER" TerrainType="TERRAIN_GRASS_HILLS" Tier="5"/>
+		<Row CivilizationType="CIVILIZATION_KHMER" TerrainType="TERRAIN_PLAINS_HILLS" Tier="5"/>
+	</StartBiasTerrains>
+	<StartBiasRivers>
+	
+		<Row CivilizationType="CIVILIZATION_JAPAN" Tier="3"/>
+		<Row CivilizationType="CIVILIZATION_GERMANY" Tier="3"/>
+	</StartBiasRivers>
+</GameData>

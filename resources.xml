@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GameData>
+	<Resources>
+		<Update>
+			<Where ResourceType="RESOURCE_WHEAT"/>
+			<Set Frequency="10"/>
+		</Update>
+	</Resources>
+	
+	<Resource_YieldChanges>
+		<Update>
+			<Where ResourceType="RESOURCE_CRABS" YieldType="YIELD_GOLD"/>
+			<Set YieldChange="3"/>
+		</Update>
+		<Update>
+			<Where ResourceType="RESOURCE_COPPER" YieldType="YIELD_GOLD"/>
+			<Set YieldChange="3"/>
+		</Update>
+		<Update>
+			<Where ResourceType="RESOURCE_FISH" YieldType="YIELD_FOOD"/>
+			<Set YieldChange="2"/>
+		</Update>
+		<Row ResourceType="RESOURCE_STONE" YieldType="YIELD_GOLD" YieldChange="1"/>
+		<Row ResourceType="RESOURCE_COFFEE" YieldType="YIELD_FOOD" YieldChange="1"/>
+		<Update>
+			<Where ResourceType="RESOURCE_COTTON" YieldType="YIELD_GOLD"/>
+			<Set YieldChange="3"/>
+		</Update>
+		<Row ResourceType="RESOURCE_COTTON" YieldType="YIELD_PRODUCTION" YieldChange="1"/>
+		<Row ResourceType="RESOURCE_INCENSE" YieldType="YIELD_PRODUCTION" YieldChange="1"/>
+		<Row ResourceType="RESOURCE_JADE" YieldType="YIELD_PRODUCTION" YieldChange="1"/>
+		<Row ResourceType="RESOURCE_MARBLE" YieldType="YIELD_PRODUCTION" YieldChange="1"/>
+		<Row ResourceType="RESOURCE_MERCURY" YieldType="YIELD_PRODUCTION" YieldChange="1"/>
+		<Update>
+			<Where ResourceType="RESOURCE_PEARLS" YieldType="YIELD_FAITH"/>
+			<Set YieldChange="2"/>
+		</Update>
+		<Row ResourceType="RESOURCE_SALT" YieldType="YIELD_PRODUCTION" YieldChange="1"/>
+		<Row ResourceType="RESOURCE_TEA" YieldType="YIELD_FOOD" YieldChange="1"/>
+		<Row ResourceType="RESOURCE_TURTLES" YieldType="YIELD_PRODUCTION" YieldChange="1"/>
+		<Row ResourceType="RESOURCE_TOBACCO" YieldType="YIELD_FOOD" YieldChange="1"/>
+	</Resource_YieldChanges>
+
+	<Feature_YieldChanges>
+		<Update>
+			<Where FeatureType="FEATURE_MARSH" YieldType="YIELD_FOOD"/>
+			<Set YieldChange="2"/>
+		</Update>
+		<Update>
+			<Where FeatureType="FEATURE_OASIS" YieldType="YIELD_GOLD"/>
+			<Set YieldChange="2"/>
+		</Update>
+
+	</Feature_YieldChanges>
+	
+	<Terrain_YieldChanges>
+		<Update>
+			<Where TerrainType="TERRAIN_SNOW_HILLS" YieldType="YIELD_PRODUCTION"/>
+			<Set YieldChange="2"/>
+		</Update>
+		<Update>
+			<Where TerrainType="TERRAIN_DESERT_HILLS" YieldType="YIELD_PRODUCTION"/>
+			<Set YieldChange="2"/>
+		</Update>
+	</Terrain_YieldChanges>
+	
+	<Resource_ValidFeatures>
+	</Resource_ValidFeatures>
+</GameData>
+

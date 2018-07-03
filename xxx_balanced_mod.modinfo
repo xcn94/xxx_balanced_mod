@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mod id="1ba72e7c-f868-44e6-881c-c7c098b8820e" version="1">
+	<Properties>
+		<Name>xxx_balanced_mod</Name>
+		<Description>国家、科技、政体、资源、奇观改动已经完成，文本在不断更新中，欢迎大家提交BUG！</Description>
+		<Teaser>文明6PVP群平衡mod</Teaser>
+		<Authors>bigXXX,114</Authors>
+		<SpecialThanks>ZPod，夏茵之梦</SpecialThanks>
+	</Properties>
+	<Files>
+		<File>ArtDefs/Units.artdef</File>
+		<File>civs.xml</File>
+		<File>resources.xml</File>
+		<File>tech_and_civic_and_polocies.xml</File>
+		<File>text.xml</File>
+		<File>icons.xml</File>
+		<File>civs_sql.sql</File>
+	</Files>
+  	<Settings>
+		<LocalizedText>
+			<Items>
+				<File>text.xml</File>
+			</Items>
+		</LocalizedText>
+	</Settings>
+
+	<!-- defines modifications to games (requires any LocalizedText from Settings above, and must import files before modifying any SQL tables) -->
+	<Components>
+		<LocalizedText>
+			<Items>
+				<File>text.xml</File>
+			</Items>
+		</LocalizedText>
+		
+		<UpdateDatabase>
+			<Properties>
+				<LoadOrder>1002</LoadOrder>
+			</Properties>
+			<Items>
+				<File>civs_sql.sql</File>
+				<File>civs.xml</File>
+				<File>resources.xml</File>
+				<File>tech_and_civic_and_polocies.xml</File>
+				<File>text.xml</File>
+			</Items>
+		</UpdateDatabase>
+		
+		<UpdateIcons>
+			<File>icons.xml</File>
+		</UpdateIcons>
+		
+	</Components>
+</Mod>

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- tech -->
+<!-- Author: XCN -->
+<!-- DateCreated: 6/27/2018 5:22:41 PM -->
+<GameData>
+	<Technologies>
+		<Update>
+			<Where TechnologyType="TECH_MILITARY_TACTICS"/>
+			<Set UITreeRow="0"/>
+		</Update>
+		<Update>
+			<Where TechnologyType="TECH_APPRENTICESHIP"/>
+			<Set UITreeRow="-2"/>
+		</Update>
+		<Update>
+			<Where TechnologyType="TECH_WRITING"/>
+			<Set Cost="50"/>
+		</Update>
+		<Update>
+			<Where TechnologyType="TECH_SQUARE_RIGGING"/>
+			<Set UITreeRow="-2"/>
+		</Update>
+		
+	</Technologies>
+	<TechnologyPrereqs>
+		<Delete Technology="TECH_MILITARY_TACTICS" PrereqTech="TECH_MATHEMATICS"/>
+		<Delete Technology="TECH_APPRENTICESHIP" PrereqTech="TECH_CURRENCY"/>
+		<Delete Technology="TECH_APPRENTICESHIP" PrereqTech="TECH_HORSEBACK_RIDING"/>
+		<Delete Technology="TECH_EDUCATION" PrereqTech="TECH_APPRENTICESHIP"/>
+		<Delete Technology="TECH_GUNPOWDER" PrereqTech="TECH_APPRENTICESHIP"/>
+		<Delete Technology="TECH_INDUSTRIALIZATION" PrereqTech="TECH_MASS_PRODUCTION"/>
+
+		<Row Technology="TECH_APPRENTICESHIP" PrereqTech="TECH_MATHEMATICS"/>
+		<Row Technology="TECH_MILITARY_TACTICS" PrereqTech="TECH_CURRENCY"/>
+		<Row Technology="TECH_MILITARY_TACTICS" PrereqTech="TECH_HORSEBACK_RIDING"/>
+		<Row Technology="TECH_EDUCATION" PrereqTech="TECH_MILITARY_TACTICS"/>
+		<Row Technology="TECH_GUNPOWDER" PrereqTech="TECH_MILITARY_TACTICS"/>
+		<Row Technology="TECH_SQUARE_RIGGING" PrereqTech="TECH_MASS_PRODUCTION"/>
+	</TechnologyPrereqs>
+	<Boosts>
+		<Update>
+			<Where TechnologyType="TECH_MILITARY_TACTICS"/>
+			<Set BoostClass="BOOST_TRIGGER_OWN_X_UNITS_OF_TYPE" Unit1Type="UNIT_SPEARMAN" NumItems="3"/>
+		</Update>
+		<Update>
+			<Where TechnologyType="TECH_ARCHERY"/>
+			<Set BoostClass="BOOST_TRIGGER_OWN_X_UNITS_OF_TYPE" Unit1Type="UNIT_SLINGER" NumItems="2"/>
+		</Update>
+		<Update>
+			<Where TechnologyType="TECH_BRONZE_WORKING"/>
+			<Set BoostClass="BOOST_TRIGGER_OWN_X_UNITS_OF_TYPE" Unit1Type="UNIT_WARRIOR" NumItems="2"/>
+		</Update>
+	</Boosts>
+	
+	
+	<Boosts>
+		<Update>
+			<Where CivicType="CIVIC_MILITARY_TRADITION"/>
+			<Set BoostClass="BOOST_TRIGGER_HAVE_X_LAND_UNITS" NumItems="4"/>
+		</Update>
+		<Update>
+			<Where CivicType="CIVIC_DEFENSIVE_TACTICS"/>
+			<Set BoostClass="BOOST_TRIGGER_HAVE_X_LAND_UNITS" NumItems="6"/>
+		</Update>
+		<Update>
+			<Where CivicType="CIVIC_GAMES_RECREATION"/>
+			<Set BoostingTechType="TECH_HORSEBACK_RIDING"/>
+		</Update>
+		<Update>
+			<Where CivicType="CIVIC_DRAMA_POETRY"/>
+			<Set BoostClass="BOOST_TRIGGER_HAVE_X_BUILDINGS" BuildingType="BUILDING_MONUMENT" NumItems="3"/>
+		</Update>
+		<Update>
+			<Where CivicType="CIVIC_HUMANISM"/>
+			<Set Unit1Type="UNIT_GREAT_WRITER"/>
+		</Update>
+		<Update>
+			<Where CivicType="CIVIC_DIPLOMATIC_SERVICE"/>
+			<Set BoostClass="BOOST_TRIGGER_RESEARCH_TECH" BoostingTechType="TECH_BANKING"/>
+		</Update>
+		<Update>
+			<Where CivicType="CIVIC_CIVIL_SERVICE"/>
+			<Set NumItems="8"/>
+		</Update>
+		<Update>
+			<Where CivicType="CIVIC_NAVAL_TRADITION"/>
+			<Set BoostClass="BOOST_TRIGGER_OWN_X_UNITS_OF_TYPE" Unit1Type="UNIT_WARRIOR" NumItems="2"/>
+		</Update>
+	</Boosts>
+
+	<Policies>
+		<Update>
+			<Where PolicyType="POLICY_FINEST_HOUR"/>
+			<Set PrereqCivic="CIVIC_MOBILIZATION"/>
+		</Update>
+	</Policies>
+	<ModifierArguments>
+		<Update>
+			<Where ModifierId="NATURALPHILOSOPHY_DISTRICTSCIENCE" Name="Amount"/>
+			<Set Value="70"/>
+		</Update>
+	</ModifierArguments>
+</GameData>
+<!--
+
+BoostClass="BOOST_TRIGGER_HAVE_X_BUILDINGS" BuildingType="BUILDING_TEMPLE" NumItems="2"
+
+
+<Technologies>
+<Row TechnologyType="TECH_APPRENTICESHIP" Name="LOC_TECH_APPRENTICESHIP_NAME" Description="LOC_TECH_APPRENTICESHIP_DESCRIPTION" Cost="300" AdvisorType="ADVISOR_GENERIC" EraType="ERA_MEDIEVAL" UITreeRow="0"/>
+<Row TechnologyType="TECH_MILITARY_TACTICS" Name="LOC_TECH_MILITARY_TACTICS_NAME" Cost="300" AdvisorType="ADVISOR_CONQUEST" EraType="ERA_MEDIEVAL" UITreeRow="-2"/>
+</Technologies>
+
+BoostClass="BOOST_TRIGGER_HAVE_X_LAND_UNITS" NumItems="8"
+	<Row Technology="TECH_EDUCATION" PrereqTech="TECH_APPRENTICESHIP"/>
+	<Row Technology="TECH_GUNPOWDER" PrereqTech="TECH_APPRENTICESHIP"/>
+-->
