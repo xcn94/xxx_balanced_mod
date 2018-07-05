@@ -422,7 +422,7 @@
 		<Update>
 			<Where Tag="LOC_BUILDING_HALICARNASSUS_MAUSOLEUM_DESCRIPTION"/>
 			<Set>
-				<Text>奇观建成后获得一个免费的 [ICON_GREATADMIRAL] 海军统帅。[NEWLINE][NEWLINE] [ICON_GREATADMIRAL] 海军统帅“隐退”技能的使用次数+1。必须建造在与港口区域相邻的单元格上。</Text>
+				<Text>奇观建成后获得一个免费的 [ICON_GreatEngineer] 大工程师。[NEWLINE][NEWLINE] [ICON_GREATADMIRAL] 海军统帅“隐退”技能的使用次数+1。必须建造在与港口区域相邻的单元格上。</Text>
 			</Set>
 		</Update>
 		<Update>
@@ -566,9 +566,155 @@
 		<Update>
 			<Where Tag="LOC_TRAIT_LEADER_FIRST_EMPEROR_DESCRIPTION"/>
 			<Set>
-				<Text>建造远古奇观时，可以消耗建造者劳动力来推进15%的奇观建造进程。建造者会获得额外建造劳动力。</Text>
+				<Text>建造远古和古典奇观时，可以消耗建造者劳动力来推进15%的奇观建造进程。建造者会获得额外建造劳动力。</Text>
 			</Set>
 		</Update>
+
+		<Update>
+			<Where Tag="LOC_IMPROVEMENT_KAMPUNG_DESCRIPTION"/>
+			<Set>
+				<Text>解锁建造者建造印度尼西亚特色改良设施“甘榜屋”的能力。[NEWLINE][NEWLINE]+1 [ICON_PRODUCTION] 生产力、+1 [ICON_Housing] 住房。每个相邻渔船+1 [ICON_PRODUCTION] 生产力。解锁更多科技和市政后可获得更多 [ICON_PRODUCTION] 生产力、[ICON_Housing] 住房和 [ICON_TOURISM] 旅游业绩。必须建造在靠近海洋资源的海岸或湖泊单元格上。</Text>
+			</Set>
+		</Update>
+		<Update>
+			<Where Tag="LOC_BUILDING_APADANA_DESCRIPTION"/>
+			<Set>
+				<Text>在此城市中建造奇观（包括阿帕达纳宫）时+1[ICON_ENVOY]使者。[NEWLINE][NEWLINE]必须建造在[ICON_CAPITAL]首都旁。</Text>
+			</Set>
+		</Update>	
+		<Update>
+			<Where Tag="LOC_TRAIT_CIVILIZATION_TA_SETI_DESCRIPTION"/>
+			<Set>
+				<Text>远程单位+25% [ICON_PRODUCTION] 生产力。所有远程单位战斗经验值+25%。战略资源矿产提供+1 [ICON_PRODUCTION] 产能。加成和奢侈品资源矿产提供+2 [ICON_GOLD] 金币。</Text>
+			</Set>
+		</Update>	
+		<Update>
+			<Where Tag="LOC_UNIT_NUBIAN_PITATI_DESCRIPTION"/>
+			<Set>
+				<Text>努比亚特色远古时代单位，取代弓箭手。[ICON_Strength] 战斗力大于弓箭手。升级为弩手。</Text>
+			</Set>
+		</Update>
+		<Update>
+			<Where Tag="LOC_TRAIT_CIVILIZATION_LAND_DOWN_UNDER_DESCRIPTION"/>
+			<Set>
+				<Text>为所有海岸城市+3[ICON_Housing]住房。牧场可触发文化炸弹。拥有迷人魅力的地块中的学院、商业中心和剧院的产出+1；惊艳的地块则产出+2。</Text>
+			</Set>
+		</Update>
+		<Update>
+			<Where Tag="LOC_TRAIT_LEADER_CITADEL_CIVILIZATION_DESCRIPTION"/>
+			<Set>
+				<Text>如他们在过去20回合内解放一座城市，则+100% [ICON_PRODUCTION] 生产力；被宣战没有 [ICON_PRODUCTION] 生产力加成。</Text>
+			</Set>
+		</Update>
+		<Update>
+			<Where Tag="LOC_TRAIT_LEADER_MONASTERIES_KING_DESCRIPTION"/>
+			<Set>
+				<Text>如位于河流之上，圣地提供+3 [ICON_FAITH] 信仰值、+2 [ICON_FOOD] 食物、+1 [ICON_HOUSING] 住房。圣地可触发文化炸弹。</Text>
+			</Set>
+		</Update>
+		<Update>
+			<Where Tag="LOC_TRAIT_LEADER_ARTHASHASTRA_DESCRIPTION"/>
+			<Set>
+				<Text>国境内军事单位+1 [ICON_Movement] 移动力、+2 [ICON_Strength] 战斗力，解锁军事训练市政后可宣布领土扩张战争。</Text>
+			</Set>
+		</Update>
+		<Update>
+			<Where Tag="LOC_TRAIT_CIVILIZATION_MAPUCHE_TOQUI_DESCRIPTION"/>
+			<Set>
+				<Text>[ICON_Governor] 总督就职城市所生产的单位在战斗中获得的经验值+25%。与处于黄金时代的文明作战时+5 [ICON_Strength] 战斗力加成。</Text>
+			</Set>
+		</Update>
+		<Update>
+			<Where Tag="LOC_TRAIT_CIVILIZATION_SCOTTISH_ENLIGHTENMENT_DESCRIPTION"/>
+			<Set>
+				<Text>幸福度为快乐的城市额外+10% [ICON_SCIENCE] 科技值、+10% [ICON_PRODUCTION] 生产力。快乐的城市中每个学院+1 [ICON_GreatScientist] 大科学家点数、每个工业区+1 [ICON_GreatEngineer] 大工程师点数。欣喜若狂的城市获得的科研、生产力以及伟人点数加成将加倍。</Text>
+			</Set>
+		</Update>
+		<Update>
+			<Where Tag="LOC_TRAIT_CIVILIZATION_THREE_KINGDOMS_DESCRIPTION"/>
+			<Set>
+				<Text>如与书院区域相邻，矿山+1 [ICON_SCIENCE] 科技值。如与书院区域相邻，农场+1 [ICON_FOOD] 食物。书院每与两个矿山相邻将获得1点相邻加成。</Text>
+			</Set>
+		</Update>
+		<Update>
+			<Where Tag="LOC_DISTRICT_SEOWON_DESCRIPTION"/>
+			<Set>
+				<Text>朝鲜特色科技区域。替代学院区域。+2 [ICON_SCIENCE] 科技值。必须建造在丘陵上。</Text>
+			</Set>
+		</Update>
+		<Update>
+			<Where Tag="LOC_TRAIT_CIVILIZATION_MONGOLIAN_ORTOO_DESCRIPTION"/>
+			<Set>
+				<Text>创建 [ICON_TradeRoute] 贸易路线后，目的地城市中将立即出现1座 [ICON_TradingPost] 贸易站。只要拥有比敌方更高的 [ICON_VisLimited] 外交能见度，所有蒙古单位基础 [ICON_Strength] 战斗力加成则翻1倍。在其他文明拥有 [ICON_TradingPost] 贸易站将不再提升 [ICON_VisLimited] 外交能见度。</Text>
+			</Set>
+		</Update>
+		<Update>
+			<Where Tag="LOC_TRAIT_LEADER_GENGHIS_KHAN_ABILITY_DESCRIPTION"/>
+			<Set>
+				<Text>所有骑兵类单位 [ICON_Strength] 战斗力+2，击败敌方骑兵类单位后有几率将其俘获。</Text>
+			</Set>
+		</Update>
+		<Update>
+			<Where Tag="LOC_TRAIT_LEADER_AMABUTHO_DESCRIPTION"/>
+			<Set>
+				<Text>可更早组建军团（需雇佣兵市政）和军队（需民族主义市政）。解锁动员市政后军团和军队的 [ICON_STRENGTH] 基础战斗力额外+3。 </Text>
+			</Set>
+		</Update>
+		<Update>
+			<Where Tag="LOC_TRAIT_LEADER_RELIGION_CITY_STATES_DESCRIPTION"/>
+			<Set>
+				<Text>战斗胜利可获得等同于被击败单位 [ICON_Strength] 战斗力+50%的 [ICON_FAITH] 信仰值。</Text>
+			</Set>
+		</Update>
+		<Update>
+			<Where Tag="LOC_UNIT_GEORGIAN_KHEVSURETI_DESCRIPTION"/>
+			<Set>
+				<Text>中世纪格鲁吉亚特色单位。在丘陵地形战斗时+5 [ICON_Strength] 战斗力。不受丘陵地形的 [ICON_Movement] 移动力减益影响。</Text>
+			</Set>
+		</Update>
+		<Update>
+			<Where Tag="LOC_BUILDING_TSIKHE_DESCRIPTION"/>
+			<Set>
+				<Text>格鲁吉亚特色建筑。花费的 [ICON_Production] 生产力低于中世纪城墙。将外部防御能力提升至最高等级。获得“保护地球”市政后提供3点 [ICON_TOURISM] 旅游业绩。提供3点 [ICON_Faith] 信仰值。</Text>
+			</Set>
+		</Update>
+		<Update>
+			<Where Tag="LOC_IMPROVEMENT_POLDER_DESCRIPTION"/>
+			<Set>
+				<Text>解锁建造者建造荷兰特色改良设施“圩田”的能力。[NEWLINE][NEWLINE]+1 [ICON_FOOD] 食物、+1 [ICON_Production] 生产力、+0.5 [ICON_Housing] 住房。如与圩田改良设施相邻，则+1 [ICON_FOOD] 食物。解锁更多市政和科技后即可获得更多 [ICON_PRODUCTION] 生产力、[ICON_GOLD] 金币和 [ICON_FOOD] 食物。必须建在与2个或更多土地单元格相邻的海岸或湖泊单元格上。单元格的 [ICON_Movement] 移动力消耗增至3点。</Text>
+			</Set>
+		</Update>
+		<Update>
+			<Where Tag="LOC_IMPROVEMENT_FISHERY_DESCRIPTION"/>
+			<Set>
+				<Text>[ICON_Governor] 总督特色改良设施，可在“测量师”总督（必须拥有“水产养殖”升级）就职的城市中修建。产出1点 [ICON_Food] 食物；如与海洋资源相邻，则额外+1 [ICON_PRODUCTION] 生产力。必须建在海岸格位上。</Text>
+			</Set>
+		</Update>
+		<Update>
+			<Where Tag="LOC_TRAIT_LEADER_MEDITERRANEAN_EXPANSION1_DESCRIPTION"/>
+			<Set>
+				<Text>您通往其他文明的 [ICON_TradeRoute] 贸易路线为埃及+6 [ICON_Gold] 金币。其他文明通往埃及的 [ICON_TradeRoute] 贸易路线能为其+2 [ICON_Food] 食物、为埃及+3 [ICON_Gold] 金币。与盟友进行贸易可获得双倍同盟点数。</Text>
+			</Set>
+		</Update>
+		<Update>
+			<Where Tag="LOC_HETAIROI_GREAT_GENERAL_COMBAT_BONUS_DESCRIPTION"/>
+			<Set>
+				<Text>相邻大将军+3战斗加成。</Text>
+			</Set>
+		</Update>
+		<Update>
+			<Where Tag="LOC_UNIT_MACEDONIAN_HETAIROI_DESCRIPTION"/>
+			<Set>
+				<Text>马其顿特色重骑兵单位，替代骑手。与大将军相邻时额外+3 [ICON_Strength] 战斗力。击杀敌方单位时+5大将军点数。初始便拥有1次免费升级。</Text>
+			</Set>
+		</Update>
+		<Update>
+			<Where Tag="LOC_TRAIT_LEADER_FALL_BABYLON_DESCRIPTION"/>
+			<Set>
+				<Text>宣布突袭战争后不再获得额外 [ICON_Movement] 移动力。占领的城市不遭受产量减益。宣布突袭战争的好战性和厌战情绪与正式战争相同。</Text>
+			</Set>
+		</Update>
+
 	</LocalizedText>
 </GameData>
 

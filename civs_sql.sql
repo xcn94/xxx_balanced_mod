@@ -246,6 +246,7 @@ UPDATE ModifierArguments SET Value='1' WHERE ModifierId='ORACLE_GREATSCIENTISTPO
 UPDATE ModifierArguments SET Value='1' WHERE ModifierId='ORACLE_GREATWRITERPOINTS' and Name='Amount';
 UPDATE ModifierArguments SET Value='1' WHERE ModifierId='ANGKORWAT_ADDPOPULATION' and Name='Amount';	
 UPDATE ModifierArguments SET Value='0' WHERE ModifierId='HALICARNASSUS_ADJUST_ENGINEER_CHARGES' and Name='Amount';		
+UPDATE ModifierArguments SET Value='GREAT_PERSON_CLASS_ENGINEER' WHERE ModifierId='HALICARNASSUS_GRANT_ADMIRAL' and Name='GreatPersonClassType';	
 UPDATE Building_YieldChanges SET YieldChange=1 WHERE BuildingType='BUILDING_COLOSSEUM' and YieldType='YIELD_CULTURE';
 UPDATE Buildings SET Entertainment=1 WHERE BuildingType='BUILDING_COLOSSEUM';
 UPDATE ModifierArguments SET Value='2' WHERE ModifierId='HUEY_LAKE_FOOD_MODIFIER' and Name='Amount';	
